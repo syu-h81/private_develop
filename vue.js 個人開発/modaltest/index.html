@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>入力フォーム</title>
+</head>
+<body>
+    <div id="app">
+        <input v-model="name" placeholder="お名前">
+        <p>この人の名前は、{{ name }}です。</p>
+    </div>
+
+    <div id="app2" v-bind:class="margin_class">
+        <textarea v-model="myText"></textarea>
+        <p>文章は、{{ myText }}</p>
+        <p>文字数は、{{ myText.length}}文字です。</p>
+    </div>
+
+    <div id="app3">
+        <label for="">
+            <input type="checkbox" v-model="myCheck">
+            チェックボックスは、{{ myCheck }}
+        </label>
+    </div>
+
+    <div id="app4" v-bind:class="margin_class">
+        <label><input type="checkbox" value="red" v-model="myChecks">赤</label>
+        <label><input type="checkbox" value="green" v-model="myChecks">緑</label>
+        <label><input type="checkbox" value="blue" v-model="myChecks">青</label>
+        <p>選択したのは、{{ myChecks }}です</p>
+    </div>
+
+    <div id="app5">
+        <label><input type="checkbox" v-model="myAgree">同意します</label>
+        <button v-bind:disabled="!myAgree">送信</button>
+    </div>
+
+    <div id="app6">
+        <label><input type="radio" value="red" v-model="picked">赤</label>
+        <label><input type="radio" value="green" v-model="picked">緑</label>
+        <label><input type="radio" value="blue" v-model="picked">青</label>
+        <p>{{ picked }}を選択</p>
+    </div>
+
+    <div id="app7">
+        <label><input type="radio" value="img_1.jpeg" v-model="filename">image1</label>
+        <label><input type="radio" value="img_2.jpeg" v-model="filename">image2</label>
+        <p>{{ filename }}を選択しています</p>
+        <img v-bind:src="filename" :class="imgSize_class" alt="">
+    </div>
+
+    <div id="app8">
+        <select v-model="myColor">
+            <option disabled value="">色を選択して下さい</option>
+            <option>red</option>
+            <option>green</option>
+            <option>blue</option>
+            <option>orange</option>
+            <option>brown</option>
+        </select>
+        <p v-bind:style="{color: myColor}">選んだのは、{{ myColor }}です</p>
+    </div>
+
+    <div id="app9">
+        <input v-model.lazy="myText">
+        <p>入力後に表示「{{ myText }}」</p>
+    </div>
+
+    <div id="app10">
+        <input v-model.number="myNumber" type="number">
+        <p>100を足して表示「{{ 100 + myNumber }}」</p>
+    </div>
+
+    <div id="app11">
+        <input v-model.trim="myText">
+        <p>前後の空白を削除「{{ myText }}」</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

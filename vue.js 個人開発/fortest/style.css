@@ -1,0 +1,21 @@
+#app1,#app2,#app3,#app4,#app5,#app6 {
+    margin-bottom: 120px;
+}
+
+table {
+    width: 60%;
+    text-align: left;
+}
+
+table th {
+    padding: 12px;
+    border-bottom: 2px solid darkgray;
+}
+
+table td {
+    padding: 12px;
+}
+
+table tr:nth-of-type(even) {
+    background-color: rgba(0, 0, 255, .1);
+}

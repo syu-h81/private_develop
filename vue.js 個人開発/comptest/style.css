@@ -1,0 +1,11 @@
+#app1,#app2,#app3,#app4,#app5,#app6 {
+    margin-bottom: 100px;
+}
+
+.my-comp {
+    width: 300px;
+    background-color: #ffffe0;
+    border: 1px solid darkorange;
+    border-radius: 8px;
+    padding: 8px;
+}

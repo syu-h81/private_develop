@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>年間支出シミュレーション</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+<div id="tax-app">
+    <h1>年間支出シミュレーション</h1>
+    <p>年間の税金支出の目安を計算します</p>
+    <input style="height: 30px; margin-bottom: 4%;" type="number" v-model.number="price" placeholder="年間の収入を入力">
+    <div class="tax-block">
+        <div class="tax-area">
+            <p class="tax incometax">所得税</p>
+            <p class="amount-money">{{ incomeTax }}円</p>
+        </div>
+        <div class="tax-area">
+            <p class="tax residentax">住民税</p>
+            <p class="amount-money">{{ residentTax }}円</p>
+        </div>
+        <div class="tax-area">
+            <p class="tax ">国民年金</p>
+            <p class="amount-money">{{ nationalPension }}円</p>
+        </div>
+        <div class="tax-area">
+            <p class="">国民健康保険</p>
+            <p class="amount-money">{{ healthInsurance }}円</p>
+        </div>
+    </div>
+</div>
+<div class="calc-method-block">
+    <h3>算出方法について</h3>
+    <div class="calc-txt-area">
+        <p>
+            ・所得税について(課税所得金額×税率－税額控除額)<br><br>
+            ・住民税について()
+
+        </p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

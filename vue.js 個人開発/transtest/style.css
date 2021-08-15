@@ -1,0 +1,18 @@
+#app1,#app2,#app3,#app4,#app5,#app6 {
+    margin-bottom: 100px;
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: 0.5s;
+}
+
+.v-enter,
+.v-leave-to {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.v-move {
+    transition: 0.5s;
+}

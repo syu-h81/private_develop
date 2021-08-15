@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>google charts</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <h3>好きなランチ投票</h3>
+    <div id="chart_div" style="height: 300px"></div>
+
+    <div id="app">
+        <li v-for="(item, c) in dataArray" v-if="c>0">{{ item[0] }}: {{ item[1] }}
+            <button v-on:click="addOne(c)">一票</button>
+        </li>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

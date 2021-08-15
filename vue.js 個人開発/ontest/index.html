@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app1">
+        <h1>クリックすると、数が増える</h1>
+        <p>{{ count }}</p>
+        <button :class="btnColor_class" v-on:click="countUp">カウントアップ</button>
+    </div>
+
+    <div id="app2">
+        <h1>クリックすると、2回目は押せないボタン</h1>
+        <button value="いいね" v-bind:disabled="isClick" v-on:click="oneClick">いいね</button>
+    </div>
+
+    <div id="app3">
+        <p>{{ count }}</p>
+        <button v-on:click="countUp(3)">3増やす</button>
+        <button v-on:click="countUp(10)">10増やす</button>
+        <button v-on:click="countUp(100)">100増やす</button>
+        <button v-on:click="countReset">0に戻す</button>
+    </div>
+
+    <div id="app4">
+        <input v-on:keyup.enter="showAlert" v-model="myText">
+        <p>{{ mytext }}</p>
+    </div>
+
+    <div id="app5">
+        <input v-on:keyup.enter.shift="showAlert" v-model="myText">
+        <p>{{ mytext }}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

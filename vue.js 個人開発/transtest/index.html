@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <title>transition テスト</title>
+</head>
+<body>
+    <div id="app1">
+        <h2>チェックボックスで表示・非表示をアニメーションする例</h2>
+        <label><input type="checkbox" v-model="isOk">切り替える</label>
+        <transition>
+            <p v-if="isOk">アニメーションの表示・非表示</p>
+        </transition>
+    </div>
+
+    <div id="app2">
+        <h2>リストが増減する時、アニメーションする例</h2>
+        <transition-group>
+            <li v-for="item in dataArray" v-bind:key="item">{{ item }}</li>
+        </transition-group>
+        <label><input v-model="addItem" placeholder="追加リスト"></label>
+        <button v-on:click="addList">追加</button><br>
+        <button v-on:click="removeLast">最後の一つを削除</button>
+    </div>
+
+    <div id="app3">
+        <h2></h2>
+        <transition-group>
+            <li v-for="item in dataArray" v-bind:key="item">{{ item }}</li>
+        </transition-group>
+        <button v-on:click="dataSort">ソートする</button>
+        <button v-on:click="dataShuffle">シャッフルする</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

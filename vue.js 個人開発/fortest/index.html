@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>for文テスト</title>
+</head>
+<body>
+    <div id="app1">
+        <h1>配列データをリストで表示する例</h1>
+        <ul>
+            <li v-for="item in myArray">{{ item }}</li>
+        </ul>
+    </div>
+
+    <div id="app2">
+        <h1>オブジェクトの配列データをリストで表示する例</h1>
+        <ul>
+            <li v-for="item in objArray">{{ item.name }} ￥{{ item.price }}</li>
+        </ul>
+    </div>
+
+    <div id="app3">
+        <h1>1*5~10*5を、繰り返し表示する例</h1>
+        <ul>
+            <li v-for="n in 10">{{ n }} × 5 = {{ n * 5}}</li>
+        </ul>
+    </div>
+
+    <div id="app4">
+        <h1>配列データを番号付きリストで表示する例</h1>
+        <ul>
+            <li v-for="(item, index) in myArray">{{index}}: {{item}}</li>
+        </ul>
+    </div>
+
+    <div id="table_app">
+        <h3>注目されている言語ランキング</h3>
+        <table>
+            <thead>
+                <!-- テーブルヘッダーの繰り返し　-->
+                <th v-for="item in header">{{ item }}</th>
+            </thead>
+            <tbody>
+                <!-- 1行の繰り返し　-->
+                <tr v-for="line in ranking">
+                    <!-- 1データの繰り返し  -->
+                    <td v-for="item in line">{{ item }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="app5">
+        <ul>
+            <li v-for="item in myArray">{{ item }}</li>
+        </ul>
+        <button v-on:click="addLast">最後尾に追加</button>
+        <button v-on:click="addObj(3)">4つ目に追加</button>
+        <button v-on:click="changeObj(0)">1つ目に変更</button>
+        <button v-on:click="deleteObj(1)">2つ目に削除</button>
+    </div>
+
+    <div id="app6">
+        <ul>
+            <li v-for="item in myArray">{{ item }}</li>
+        </ul>
+        <button v-on:click="sortDate(myArray)">ソートする</button>
+    </div>
+
+    <div id="app7">
+        <ul>
+            <li v-for="item in myArray" v-if="item % 2 == 0">{{ item }}</li>
+        </ul>
+    </div>
+
+    <div id="app8">
+        <ul>
+            <li v-for="item in myArray">{{ item }}</li>
+        </ul>
+        <button v-on:click="evenShow()">偶数を表示</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

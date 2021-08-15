@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <title>component テスト</title>
+</head>
+<body>
+    <div id="app1">
+        <h2>コンポーネントを作って表示する例</h2>
+        <my-component></my-component>
+        <my-component></my-component>
+        <my-component></my-component>
+    </div>
+
+    <div id="app2">
+        <h2>それぞれ別にカウントするコンポーネントの例</h2>
+        <my-component></my-component>
+        <my-component></my-component>
+        <my-component></my-component>
+    </div>
+
+    <div id="app3">
+        <h2>コンポーネントに値を渡す例</h2>
+        <my-component my-name="桃太郎"></my-component>
+        <my-component my-name="浦島太郎"></my-component>
+        <my-component></my-component>
+    </div>
+
+    <div id="app4">
+        <h2>配列からコンポーネントを作って表示する例</h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

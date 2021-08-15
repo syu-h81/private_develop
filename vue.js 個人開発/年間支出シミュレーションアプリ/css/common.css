@@ -1,0 +1,33 @@
+body {
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-family: serif;
+  font-size: 1.6em;
+}
+
+.tax-block {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #a9a9a9;
+  padding: 4% 0;
+  border-radius: 10px;
+}
+
+.tax-block .tax-area {
+  margin: 0 auto;
+  max-width: 350px;
+  width: 100%;
+  margin-bottom: 4%;
+  padding: 1% 0;
+  background-color: #ddd;
+  border-radius: 6px;
+}
+
+.tax-block .tax-area:last-child {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=common.css.map */
